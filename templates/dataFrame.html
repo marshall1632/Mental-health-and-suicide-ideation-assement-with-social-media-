@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    tr{
+        color: #090909;
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+
+    }
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+{% include 'index.html' %}
+{% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">PREDICTION </h1>
+            <div class="row center">
+            </div>
+                     <div class="row">
+                         <table>
+                            <tr>
+                                <td>LSTM Table:</td>
+                                 <td>
+                                    <a href="{{ url_for('predict_table') }}">testing table</a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>LSTM Pie Graph:</td>
+                                 <td>
+                                    <a href="{{ url_for('plot_pie') }}">Plot pie graph</a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>LSTM Bar Graph:</td>
+                                 <td>
+                                    <a href="{{ url_for('plot_bar') }}">Plot Bar graph</a>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>LSTM Confusion Matrix:</td>
+                                 <td>
+                                    <a href="{{ url_for('rnn_prediction_f') }}">Confusion Graph</a>
+                                </td>
+                            </tr>
+                         </table>
+                     </div>
+             </div>
+        </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>

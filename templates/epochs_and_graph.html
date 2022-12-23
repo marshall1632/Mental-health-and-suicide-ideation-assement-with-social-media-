@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> epoch</title>
+    <style type="text/css">
+
+    tr{
+        color: blue;
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+
+    }
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+    {% include 'index.html' %}
+    {% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">LSTM </h1>
+            <div class="row center">
+                <h5 class="header col s12 light">table of epoch<br></h5>
+            </div>
+            <table style="margin-left: 20px;">
+                    <!-- Table headers -->
+                    <th>
+                        <tr style="color: green; ">
+                            <td>Epoch</td>
+                            <td>Training Loss</td>
+                            <td>Testing Loss</td>
+                            <td>Accuracy</td>
+                            <td>F-SCORE</td>
+                            <td>Recall</td>
+                            <td>Precision</td>
+                        </tr>
+                    </th>
+                    {%for i in range(0,trains) %}
+                        <tr>
+                        <td>{{i}}</td>
+                        <td>{{training_losses[i]}}</td>
+                        <td>{{testing_losses[i]}}</td>
+                        <td>{{accuracy_epoch[i]}}</td>
+                        <td>{{f_score[i]}}</td>
+                        <td>{{precision[i]}}</td>
+                        <td>{{recall[i]}}</td>
+                    {%endfor%}
+                    </tr>
+                </table>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

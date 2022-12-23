@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'index.html' %}
+        {% block content %}
+     <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <br><br>
+          <h1 class="header center orange-text">Confusion Matrix </h1>
+          <div class="row center">
+            <h5 class="header col s12 light">matrix<br>
+            </h5>
+          </div>
+          <div class="row">
+             <p>Prediction below</p>
+    <table>
+        <tr>
+            <td>LSTM confusion matrix:</td>
+            <td>
+                <img src="data:image/png;base64, {{ plot_url }}">
+            </td>
+        </tr>
+    </table>
+          </div>
+        </div>
+     </div>
+    {% endblock %}
+
+</body>
+</html>

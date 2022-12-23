@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    tr{
+        color: #0a0a0a;
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(166, 161, 161, 0.5);
+
+    }
+    td{
+        padding: 8px 8px;
+        border: 1px solid #5e5151;
+    }
+</style>
+</head>
+<body>
+{% include 'index.html' %}
+    {% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">LSTM</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Prediction table<br></h5>
+            </div>
+            <table style="margin-left: 20px;">
+                    <!-- Table headers -->
+                    <th>
+                        <tr style="color: green; ">
+                            <td>count</td>
+                            <td>Tweets</td>
+                            <td>prediction</td>
+                            <td>Description</td>
+                        </tr>
+                    </th>
+                    {%for i in range(0,text) %}
+                        <tr>
+                        <td>{{i}}</td>
+                        <td>{{text_predict[i]}}</td>
+                        <td>{{predict_p[i]}}
+                        <td>{{description[i]}}</td>
+                    {%endfor%}
+                    </tr>
+                </table>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

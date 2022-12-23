@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUICIDAL ANALYSIS</title> <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="static/img/favicon1.png" type="image/x-icon"/>
+    <title>SUICIDAL ANALYSIS</title>
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/main.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Almendra' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Rancho|Audiowide|Kaushan+Script|Libre+Barcode+128+Text|Righteous|Handlee" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script>
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+						if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+								document.getElementById("myBtn").style.display = "block";
+						} else {
+								document.getElementById("myBtn").style.display = "none";
+						}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+						document.body.scrollTop = 0;
+						document.documentElement.scrollTop = 0;
+				}
+		</script>
+</head>
+<body>
+ {% include 'index.html' %}
+
+    {% block content %}
+         <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    </div>
+
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1>Twitter Sentiment Analysis</h1>
+				</div>
+
+				<div class="col-lg-6">
+					<p class="mb-4">
+                                    Mental health influences how we think and feel about ourselves
+                                    and others, and how we interpret events. It affects our
+                                    capacity to learn, to communicate and to form, sustain and
+                                    end relationships. It also influences our ability to cope with
+                                    change, transition and life events, such as: having a baby,
+                                    moving to a new house, experiencing bereavement
+                                </p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+    <section class="section-padding" id="about">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <h2 class="mb-lg-3 mb-3">Mental Health System</h2>
+
+                            <p>NLP techniques
+                                In recent times neural network models in NLP have shown a significant improvement in
+                                detecting suicide ideation from the implementations that are complex deep learning
+                                computing to reduce the traditional ML systems. Recurrent neural network (RNN) is
+                                implemented to outline a group of modeling. The effectiveness of the LSTM model is the
+                                most used for long-range dependency. Sawhney et al. showed the ability and strength of
+                                the C-LSTM model and compared it to the ML and DL classifiers and showed better results
+                                (Sawhney et al., 2018). Ji et al. also used LSTM and compared them to the other five ML
+                                models, and his study shows a significant benchmark for detecting suicidal ideation on
+                                Twitter and Reddit (Ji et al., 2018).
+                            </p>
+
+                            <p>CNN with pooling layers, convolutional and nonlinear, has been shown to be applied in
+                                NLP tasks and showed significant success better than NLP traditional methods but
+                                prevents dealing with long-range communication. Kalchbrenner et al. examined the power
+                                of CNN on n-gram characteristics by testing different sentence placements (Kalchbrenner
+                                et al., 2014). Yin and Schutze introduced the unsupervised pre-training model and
+                                multichannel word embedding to upgrade the accuracy (Yin and Schutze, 2016). Morales
+                                et al. discussed the combined model of LSTM and CNN has improved the suicide risk, and
+                                the outcome was tremendous as they feature tone and test personality (Morales et al.).
+                                The combination of using RNN and CNN works as a vector and encodes the whole sequence
+                                and has the ability to get every important data sequence and is called a hybrid.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+{% endblock %}
+</body>
+</html>

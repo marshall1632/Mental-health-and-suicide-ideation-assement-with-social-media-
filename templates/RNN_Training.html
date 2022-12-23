@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'index.html' %}
+{% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">The training </h1>
+            <div class="row center">
+                <h5 class="header col s12 light">file from training data<br></h5>
+            </div>
+            <form action='{{ url_for('rnn_train') }}' method="POST">
+                <div class="formcontainer">
+                    <div class="container">
+                        <label for="uname"><strong>hidden dimension</strong></label>
+                        <input id='hidden' type="text" placeholder="hidden dim" name="hidden_dim" required>
+                        <label for="uname"><strong>Learning_rate</strong></label>
+                        <input id='learn' type="text" placeholder="Learning rate" name="learning_rate" required>
+                        <label for="uname"><strong>Epochs</strong></label>
+                        <input id='epoch' type="text" placeholder="epochs" name="Epochs" required>
+                    </div>
+                    <button type="submit">start training</button>
+                </div>
+            </form>
+             <div class="row">
+             <p>The check</p>
+            <table>
+                <tr>
+                    <td>check epoch:</td>
+                    <td>
+                        <a href="{{ url_for('rnn_train') }}">Epochs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>plot graphs:</td>
+                    <td>
+                        <a href="{{ url_for('rnn_train_plot') }}">loss and accuracy</a>
+                    </td>
+                </tr>
+            </table>
+                 <table>
+                <tr>
+                    <td>confusion matrix:</td>
+                    <td>
+                        <a href="{{ url_for('confusion') }}">confusion matrix</a>
+                    </td>
+                </tr>
+                <tr>
+            </table>
+             </div>
+        </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>

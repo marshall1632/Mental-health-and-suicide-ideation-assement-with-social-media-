@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>instruction</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
+</head>
+<body>
+{% include 'index.html' %}
+{% block content %}
+    <section class="section-history" id="history">
+            <div class="container">
+                <div class="text-center section-diff-title">
+                    <h2>Instruction</h2>
+                    <p>how the system operate</p>
+                </div>
+                <!-- Timeline -->
+                <ul class="timeline">
+                    <!-- Timeline badge -->
+                    <li class="timeline-start">
+                        <div class="rectangle"><span>first step</span></div>
+                    </li><!-- /.timeline-start -->
+
+                    <!-- Timeline job & description  -->
+                    <li>
+                        <div class="rectangle timeline-rectangle"></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <div class="timeline-date">
+                                    <p>1</p>
+                                </div><!-- /.timeline-date -->
+                                <div class="timeline-position">
+                                    <p>Train the model</p>
+                                </div><!-- /.timeline-position -->
+                            </div><!-- /.timeline-heading -->
+                            <div class="timeline-body">
+                                <p>Choose the model to train and train after the model is trained performance of the
+                                    model will be represented by tables and graphs. wait for the page to stop loading
+                                    then the model is done training so that user can be able to view the performance</p>
+                            </div><!-- /.timeline-body -->
+                        </div><!-- /.timeline-panel -->
+                    </li>
+
+                    <!-- Timeline badge -->
+                    <li class="timeline-start">
+                        <div class="rectangle"><span>second step</span></div>
+                    </li><!-- /.timeline-start -->
+
+                    <!-- Timeline job & description, inverted  -->
+                    <li class="timeline-inverted">
+                        <div class="rectangle timeline-rectangle"></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                               <div class="timeline-position">
+                                    <p>Prediction</p>
+                                </div><!-- /.timeline-position -->
+                                <div class="timeline-date">
+                                    <p>2</p>
+                                </div><!-- /.timeline-date -->
+                            </div><!-- /.timeline-heading -->
+                            <div class="timeline-body">mb -->
+                                <p>After the training then user can click the prediction in the navbar to navigate to
+                                    the prediction page the upload the prediction dataset which is csv. Then after the
+                                    user choose the model the want to use for prediction. Prediction of the data will
+                                    be represented by graphs and table to show what is negative and positive in the
+                                    tweets.</p>
+                            </div><!-- /.timeline-body -->
+                        </div><!-- /.timeline-panel -->
+                    </li><!-- /.timeline-inverted -->
+
+                    <!-- Timeline job & description  -->
+                    <li>
+                        <div class="rectangle timeline-rectangle"></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <div class="timeline-date">
+                                    <p>done</p>
+                                </div><!-- /.timeline-date -->
+                                <div class="timeline-position">
+                                    <p>The end</p>
+                                </div><!-- /.timeline-position -->
+                            </div><!-- /.timeline-heading -->
+                            <div class="timeline-body">
+                                <p>Then the system is done</p>
+                            </div><!-- /.timeline-body -->
+                        </div><!-- /.timeline-panel -->
+                    </li>
+                    </l>
+                </ul><!-- /.timeline -->
+            </div>
+        </section><!-- /.section-history -->
+
+
+{% endblock %}
+</body>
+</html>
